@@ -4,7 +4,7 @@ This is a project work carried out for assessment purpose under a limited time a
 
 ### Installation
 
-To install this project, clone to your local machine and set up a WAMP/LAMP/MAMP/XAMPP server. cd to the project folder and install `composer` and `laravel`. Run `npm install` to install the dependencies.
+To install this project, clone to your local machine and set up a WAMP/LAMP/MAMP/XAMPP server. cd to the project folder and run `composer install` and `npm install`.
 
 ## Starting the Development server
 
@@ -12,11 +12,11 @@ Run `php artisan serve` and navigate to `localhost:8000` on your browser.
 
 ## Database
 
-The database configuration can be found in the `.env` file. Adjust the settings to suit your setup.
+Run `copy .env.example .env` command and change the settings to suit your database configuration.
 
 ## Test Data
 
-A database file has been included in this repo. Import it to your database through an interface like `PHPMyAdmin`. If you would love to generate your own test data, a `UserFactory` and `BlogPostFactory` has been created for you for that purpose. Run `php artisan tinker` followed by the necessary commands as outlined in those files.
+A database file has been included in this repo. Import it to your database through an interface like `PHPMyAdmin` but if you would love to generate your own test data, a `UserFactory` and `BlogPostFactory` has been created for you for that purpose. Run `php artisan key:generate`, `php artisan migrate` and `php artisan tinker` - followed by the necessary commands as outlined in those files.
 
 ## License
 
