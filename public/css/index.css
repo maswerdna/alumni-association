@@ -1,0 +1,96 @@
+:root {
+    --font-family-sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    --header-height: 64px;
+}
+.font--sans {
+    font-family: var(--font-family-sans-serif);
+}
+main {
+    padding-top: var(--header-height);
+}
+.app-nav {
+    height: var(--header-height);
+}
+#welcome-bg {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#welcome-bg::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #000;
+    -moz-opacity: .7;
+    -khtml-opacity: .7;
+    -webkit-opacity: .7;
+    opacity: .7;
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(opacity=70);
+    filter: alpha(opacity=70);
+}
+.welcome-grid-layout {
+    --width: 100%;
+    --padding: 0;
+    --content-padding: 2rem;
+    --content-padding-blog: 0;
+    --layout: 100%;
+    --gap: 0;
+    --left-child-display: none;
+    --right-child-display: block;
+    display: grid;
+    grid-gap: var(--gap);
+    grid-template-columns: var(--layout);
+    width: var(--width);
+    padding: var(--padding);
+}
+.grid-left {
+    display: var(--left-child-display);
+}
+.grid-right {
+    display: var(--right-child-display);
+}
+.grid-content {
+    display: block;
+    padding: var(--content-padding);
+}
+.grid-content.blog {
+    display: block;
+    padding: var(--content-padding-blog);
+}
+.content-area {
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+@media (min-width: 640px) {
+    .welcome-grid-layout {
+        --padding: 1rem;
+        --layout: 1fr 1fr;
+        --gap: 1rem;
+        --content-padding: 1rem;
+        --content-padding-blog: 0;
+    }
+}
+
+@media (min-width: 768px) {
+    .welcome-grid-layout {
+        --layout: 6fr 4fr;
+    }
+}
+
+@media (min-width: 1024px) {
+    .welcome-grid-layout {
+        /* --padding: 2rem; */
+        --layout: 7fr 3fr;
+        /* --gap: 2rem; */
+        --content-padding: 0;
+    }
+}
+
+@media (min-width: 1280px) {
+    /*  */
+}
